@@ -9,6 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+    @IBOutlet weak var tabBar: UINavigationItem!
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -20,10 +21,11 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         
         tableView.dataSource = self
         tableView.delegate = self
-        
-        
+            
         
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,19 +41,42 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+//        let cell = UITableViewCell()
+//        
+//        let task = tasks[indexPath.row]
+//        
+//        if task.isImportant{
+//            
+//            cell.textLabel?.text = "\(task.name!)"
+//        }else{
+//        
+//            cell.textLabel?.text = task.name!
+//        }
+//        
+//        
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! detailTableViewCell
         
         let task = tasks[indexPath.row]
-        
         if task.isImportant{
-            
-            cell.textLabel?.text = "\(task.name!)"
+            cell.textLabel?.text = "🛑\(task.name!)"
+            //cell.accessoryType = .checkmark
         }else{
-        
             cell.textLabel?.text = task.name!
+            cell.accessoryType = .none
         }
         
-        
+     
+        cell.mainBackground.layer.cornerRadius = 8
+        cell.mainBackground.layer.masksToBounds = true
+        cell.mainBackground.backgroundColor = UIColor.brown
+        cell.textLabel?.textColor = UIColor.yellow
+        cell.textLabel?.backgroundColor = UIColor.brown
+//        cell.shadowBack.layer.masksToBounds = false
+//        //   cell.shadowBack.layer.shadowOffset = CGSize(0, 0)
+//        cell.shadowBack.layer.shadowColor = UIColor.black.cgColor
+//        cell.shadowBack.layer.shadowOpacity = 0.23
+//        cell.shadowBack.layer.shadowRadius = 4
         return cell
     }
     
@@ -92,6 +117,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         tableView.reloadData()
         
     }
+    
+    
     
     
 

@@ -9,9 +9,13 @@
 import UIKit
 
 class detailTableViewCell: UITableViewCell {
+    @IBOutlet weak var mainBackground: UIView!
 
-    @IBOutlet weak var label: UILabel!
+ 
+
     
+    @IBOutlet weak var labelText: UILabel!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

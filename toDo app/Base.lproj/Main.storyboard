@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--ToDo lists-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="toDo_app" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,22 +22,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="104" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SGg-e6-6CS">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="74" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SGg-e6-6CS">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="104" id="0pf-Vh-7he" customClass="detailTableViewCell" customModule="toDo_app" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="104"/>
+                                    <tableViewCell clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" focusStyle="custom" rowHeight="74" id="0pf-Vh-7he" customClass="detailTableViewCell" customModule="toDo_app" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="74"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0pf-Vh-7he" id="Dux-ZK-dyX">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="104"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ggi-PA-Wbh">
-                                                    <rect key="frame" x="10" y="0.0" width="355" height="103"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ObW-3j-cgv" userLabel="mainBackground">
+                                                    <rect key="frame" x="10" y="10" width="355" height="53.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to do list" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhT-dS-PBc">
-                                                            <rect key="frame" x="8" y="8" width="339" height="87"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i6Q-BW-Wb2">
+                                                            <rect key="frame" x="10" y="16" width="335" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -45,28 +45,28 @@
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstItem="jhT-dS-PBc" firstAttribute="top" secondItem="ggi-PA-Wbh" secondAttribute="top" constant="8" id="LdZ-H4-myg"/>
-                                                        <constraint firstItem="jhT-dS-PBc" firstAttribute="leading" secondItem="ggi-PA-Wbh" secondAttribute="leading" constant="8" id="W7o-wn-mjb"/>
-                                                        <constraint firstAttribute="trailing" secondItem="jhT-dS-PBc" secondAttribute="trailing" constant="8" id="e5j-dY-OaR"/>
-                                                        <constraint firstAttribute="bottom" secondItem="jhT-dS-PBc" secondAttribute="bottom" constant="8" id="v1M-Wh-LFr"/>
+                                                        <constraint firstItem="i6Q-BW-Wb2" firstAttribute="leading" secondItem="ObW-3j-cgv" secondAttribute="leading" constant="10" id="TnA-vn-Chi"/>
+                                                        <constraint firstAttribute="trailing" secondItem="i6Q-BW-Wb2" secondAttribute="trailing" constant="10" id="v4c-sD-eyt"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
+                                            <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstItem="ggi-PA-Wbh" firstAttribute="top" secondItem="Dux-ZK-dyX" secondAttribute="top" id="JVc-0b-VvV"/>
-                                                <constraint firstItem="ggi-PA-Wbh" firstAttribute="leading" secondItem="Dux-ZK-dyX" secondAttribute="leading" constant="10" id="Jdn-IH-kur"/>
-                                                <constraint firstAttribute="trailing" secondItem="ggi-PA-Wbh" secondAttribute="trailing" constant="10" id="Xmg-tz-Xud"/>
-                                                <constraint firstAttribute="bottom" secondItem="ggi-PA-Wbh" secondAttribute="bottom" id="dEB-P2-DTZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="ObW-3j-cgv" secondAttribute="trailing" constant="10" id="6uB-t2-f7o"/>
+                                                <constraint firstItem="ObW-3j-cgv" firstAttribute="leading" secondItem="Dux-ZK-dyX" secondAttribute="leading" constant="10" id="GEq-Mt-uuM"/>
+                                                <constraint firstItem="ObW-3j-cgv" firstAttribute="top" secondItem="Dux-ZK-dyX" secondAttribute="top" constant="10" id="Gq9-Qe-eke"/>
+                                                <constraint firstAttribute="bottom" secondItem="ObW-3j-cgv" secondAttribute="bottom" constant="10" id="eIl-PS-qDz"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="label" destination="jhT-dS-PBc" id="XZq-57-JPc"/>
+                                            <outlet property="labelText" destination="i6Q-BW-Wb2" id="1wN-Qp-j18"/>
+                                            <outlet property="mainBackground" destination="ObW-3j-cgv" id="YRP-Qd-g2h"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.50196081400000003" green="0.25098040700000002" blue="0.0" alpha="0.8572613441780822" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="SGg-e6-6CS" secondAttribute="trailing" id="33F-je-bdo"/>
                             <constraint firstItem="SGg-e6-6CS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ddi-UA-WnI"/>
@@ -74,7 +74,7 @@
                             <constraint firstItem="SGg-e6-6CS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mr3-uO-Rdh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="BQK-gL-0Pk">
+                    <navigationItem key="navigationItem" title="ToDo lists" id="BQK-gL-0Pk">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="6Ca-MZ-XwZ">
                             <connections>
                                 <segue destination="RdE-Yq-zIj" kind="show" id="GhL-kL-hZe"/>
@@ -82,6 +82,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="tabBar" destination="BQK-gL-0Pk" id="o66-nG-3RS"/>
                         <outlet property="tableView" destination="SGg-e6-6CS" id="lrI-u5-dnf"/>
                     </connections>
                 </viewController>
